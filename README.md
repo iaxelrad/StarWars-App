@@ -8,7 +8,10 @@ This project is a small, yet concise demonstration of the React.js framework and
 
 ## Usage
 
-When cloning this repository to your personal device - Via the terminal from inside the root folder you need to run `yarn add` or `npm install` to download the projects dependencies.
+When cloning this repository to your personal device - Via the terminal from inside the root folder you need to run - 
+
+### `yarn` or `npm install` in order to download the projects dependencies.
+
 In the project directory, you can then run:
 
 ### `yarn start` or `npm start` - 
