@@ -26,7 +26,7 @@ export const Movie = ({ movie }) => {
     <MovieItem>
       <div>
         <Title>{movie.title}</Title>
-        {isFavorite ? <p>{movie.opening_crawl}</p> : null}
+        <Subtitle>{movie.opening_crawl}</Subtitle>
       </div>
       <HorizontalSpacer width={5} />
       <div onClick={toggleIsFavorite}>
@@ -38,18 +38,22 @@ export const Movie = ({ movie }) => {
 
 const MovieItem = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 80vw;
+  width: 60vw;
   margin: 10px;
   padding: 10px;
   background-color: ${BLACK};
-  border-radius: 5px;
+  border-radius: 10px;
 `;
 
 const Title = styled.h1`
   text-align: center;
   font-size: 1.5em;
+`;
+
+const Subtitle = styled.p`
+  text-align: center;
 `;
 
 const HorizontalSpacer = styled.div`
