@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { BLACK } from '../../common/colors';
 import FavoriteIcon from '../FavoriteIcon';
 import { checkFavorites } from './logic/checkFavorites';
 import { deleteFromFavorites } from './logic/deleteFromFavorites';
@@ -24,7 +25,8 @@ export const Movie = ({ movie }) => {
   return (
     <MovieItem>
       <div>
-        <div>{movie.title}</div>
+        <Title>{movie.title}</Title>
+        {isFavorite ? <p>{movie.opening_crawl}</p> : null}
       </div>
       <HorizontalSpacer width={5} />
       <div onClick={toggleIsFavorite}>
@@ -36,12 +38,18 @@ export const Movie = ({ movie }) => {
 
 const MovieItem = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  width: 80vw;
   margin: 10px;
-  background-color: black;
+  padding: 10px;
+  background-color: ${BLACK};
   border-radius: 5px;
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  font-size: 1.5em;
 `;
 
 const HorizontalSpacer = styled.div`
