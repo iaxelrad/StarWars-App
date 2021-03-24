@@ -40,7 +40,7 @@ const MovieItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  width: 450px;
   margin: 10px;
   padding: 10px;
   background-color: ${BLACK};
@@ -49,11 +49,12 @@ const MovieItem = styled.div`
 
 const Title = styled.h1`
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
 `;
 
 const Subtitle = styled.p`
   text-align: center;
+  font-size: 1.5em;
 `;
 
 const HorizontalSpacer = styled.div`

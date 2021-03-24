@@ -13,21 +13,34 @@ export const Container = () => {
   return (
     <Wrapper>
       <Title>Pick Your Favorite Star Wars Film</Title>
-      {movies.length > 0 ? (
-        movies.map(movie => {
-          return <Movie key={movie.episode_id} movie={movie} />;
-        })
-      ) : (
-        <div>Loading...</div>
-      )}
+      <FilmWrapper>
+        {movies.length > 0 ? (
+          movies.map(movie => {
+            return <Movie key={movie.episode_id} movie={movie} />;
+          })
+        ) : (
+          <div>Loading...</div>
+        )}
+      </FilmWrapper>
     </Wrapper>
   );
 };
 
 const Title = styled.h1`
   text-align: center;
-  font-size: 1.5em;
+  font-size: 3em;
 `;
 const Wrapper = styled.div`
-  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  height: 95vh;
+`;
+const FilmWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 95vw;
+  justify-content: center;
+  align-content: center;
+  margin: 10px;
 `;
