@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container } from './components/Container';
+import { MainPage } from './components/MainPage';
 import styled from 'styled-components';
 
 export const App = () => {
   return (
     <Wrapper>
-      <Container />
+      <MainPage />
     </Wrapper>
   );
 };

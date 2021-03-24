@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { fetchFilmsFromAPI } from '../api/fetchFilmsFromAPI';
 import { Movie } from './movie';
 
-export const Container = () => {
+export const MainPage = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export const Container = () => {
     <Wrapper>
       <Title>Pick Your Favorite Star Wars Film</Title>
       <FilmWrapper>
-        {movies.length > 0 ? (
+        {movies ? (
           movies.map(movie => {
             return <Movie key={movie.episode_id} movie={movie} />;
           })
