@@ -41,8 +41,8 @@ const MovieItem = styled.div`
   justify-content: center;
   align-items: center;
   width: 450px;
-  margin: 10px;
-  padding: 10px;
+  margin: 15px;
+  padding: 20px;
   background-color: ${BLACK};
   border-radius: 10px;
 `;
