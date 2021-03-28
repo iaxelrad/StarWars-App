@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { fetchFilmsFromAPI } from '../api/fetchFilmsFromAPI';
 import { Movie } from './movie';
+import { Legend } from './Legend';
 
 export const MainPage = () => {
   const [movies, setMovies] = useState([]);
@@ -13,6 +14,7 @@ export const MainPage = () => {
   return (
     <Wrapper>
       <Title>Pick Your Favorite Star Wars Film</Title>
+      <Legend />
       <FilmWrapper>
         {movies ? (
           movies.map(movie => {
@@ -30,6 +32,7 @@ const Title = styled.h1`
   text-align: center;
   font-size: 3em;
 `;
+
 const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
