@@ -3,18 +3,16 @@ import styled from 'styled-components';
 
 import favorite from '../common/assets/favorite.png';
 import notFavorite from '../common/assets/not-favorite.png';
+import { LegendItem } from './LegendItem';
 
 export const Legend = () => {
   return (
     <LegendContainer>
-      <LegendSubtitle>
-        <Img src={favorite} alt="favorite-icon" />
-        <h2>May the force be with this movie</h2>
-      </LegendSubtitle>
-      <LegendSubtitle>
-        <Img src={notFavorite} alt="favorite-icon" />
-        <h2>This is not the droid I'm looking for</h2>
-      </LegendSubtitle>
+      <LegendItem src={favorite} text=" - May the force be with this movie" />
+      <LegendItem
+        src={notFavorite}
+        text=" - This is not the droid I'm looking for"
+      />
     </LegendContainer>
   );
 };
@@ -24,12 +22,4 @@ const LegendContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-const LegendSubtitle = styled.div`
-  display: flex;
-  align-items: center;
-`;
-const Img = styled.img`
-  width: 60px;
-  height: 60px;
 `;
