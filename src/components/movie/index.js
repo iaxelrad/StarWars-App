@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { BLACK } from '../../common/colors';
-import FavoriteIcon from '../FavoriteIcon';
+import { FavoriteIcon } from '../FavoriteIcon';
 import { checkFavorites } from './logic/checkFavorites';
 import { deleteFromFavorites } from './logic/deleteFromFavorites';
 import { saveToFavorites } from './logic/saveToFavorites';
@@ -38,13 +38,12 @@ export const Movie = ({ movie }) => {
 
 const MovieItem = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 450px;
+  width: 550px;
   margin: 15px;
   padding: 20px;
   background-color: ${BLACK};
-  border-radius: 10px;
+  border-radius: 15px;
+  border: 1px solid;
 `;
 
 const Title = styled.h1`
